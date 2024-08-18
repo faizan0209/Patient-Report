@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./imgs/TestLogo.png" alt="Tech Care Logo" />
+        </div>
+        <nav class="nav-links">
+          <a href="#"> <img src="./imgs/home_FILL0_wght300_GRAD0_opsz24.svg" alt="..."> Overview</a>
+          <a href="#" class="active"> <img src="./imgs/group_FILL0_wght300_GRAD0_opsz24.svg" alt=""> Patients</a>
+          <a href="#"> <img src="./imgs/calendar_today_FILL0_wght300_GRAD0_opsz24.svg" alt=""> Schedule</a>
+          <a href="#"> <img src="./imgs/chat_bubble_FILL0_wght300_GRAD0_opsz24.svg" alt=""> Message</a>
+          <a href="#"><img src="./imgs/credit_card_FILL0_wght300_GRAD0_opsz24.svg" alt=""> Transactions</a>
+        </nav>
+        <div class="user-profile">
+          <img
+            src="./imgs/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png"
+            alt="User Profile"
+          />
+          <div>
+            <p>Dr. Jane Simmons</p>
+            <small>General Practitioner</small>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <aside>
+          <div class="sidebar">
+            <h2>Patients</h2>
+            <div id="patient" class="patient-list">
+            </div>
+          </div>
+        </aside>
+
+        <main>
+          <div class="diagnosis-history">
+            <h2>Diagnosis History</h2>
+            <div class="chart">
+              <canvas id="myChart"></canvas>
+              <div class="chart-info">
+                <!-- <div class="info-item">
+                  <p>Systolic</p>
+                  <span>160</span>
+                </div>
+                <div class="info-item">
+                  <p>Diastolic</p>
+                  <span>78</span>
+                </div> -->
+              </div>
+            </div>
+            <div class="health-stats">
+              <div class="stat-item">
+                <img src="./imgs/respiratory rate.svg" alt="Respiratory Rate" />
+                <div>
+                  <p>Respiratory Rate</p>
+                  <span class="text-bold">20 bpm</span>
+                  <small>Normal</small>
+                </div>
+              </div>
+              <div class="stat-item item2">
+                <img src="./imgs/temperature.svg" alt="Temperature" />
+                <div>
+                  <p>Temperature</p>
+                  <span class="text-bold">98.6°F</span>
+                  <small>Normal</small>
+                </div>
+              </div>
+              <div class="stat-item item3">
+                <img src="./imgs/HeartBPM.svg" alt="Heart Rate" />
+                <div>
+                  <p>Heart Rate</p>
+                  <span class="text-bold">78 bpm</span>
+                  <small>Lower than Average</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagnostic-list">
+            <h2>Diagnostic List</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Problem/Diagnosis</th>
+                  <th>Description</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Hypertension</td>
+                  <td>Chronic high blood pressure</td>
+                  <td>Under Observation</td>
+                </tr>
+                <tr>
+                  <td>Type 2 Diabetes</td>
+                  <td>Insulin resistance and elevated blood sugar</td>
+                  <td>Good</td>
+                </tr>
+                <tr>
+                  <td>Asthma</td>
+                  <td>Recurrent episodes of bronchial constriction</td>
+                  <td>Inactive</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+
+        <div class="patient-info">
+          <img src="./imgs/Layer 2.png" alt="Jessica Taylor" />
+          <h2>Jessica Taylor</h2>
+          <ul>
+            <li><strong>Birth Date:</strong> August 28, 1995</li>
+            <li><strong>Gender:</strong> Female</li>
+            <li><strong>Contact:</strong> (415) 555-1234</li>
+            <li><strong>Emergency Contacts:</strong> (415) 555-5678</li>
+            <li>
+              <strong>Insurance Provider:</strong> Sunshine Health Assurance
+            </li>
+          </ul>
+          <button class="info-button">Show all Information</button>
+        </div>
+
+        <div class="lab-results">
+          <h2>Lab Results</h2>
+          <ul>
+            <li>
+              <div class="result-item">
+                <i class="fas fa-flask"></i>
+                <div>
+                  <p>Blood Tests</p>
+                  <span>View Details</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result-item">
+                <i class="fas fa-x-ray"></i>
+                <div>
+                  <p>CT Scans</p>
+                  <span>View Details</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result-item">
+                <i class="fas fa-file-medical-alt"></i>
+                <div>
+                  <p>Radiology Reports</p>
+                  <span>View Details</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="result-item">
+                <i class="fas fa-vial"></i>
+                <div>
+                  <p>Urine Test</p>
+                  <span>View Details</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["Oct", "Nov", "Dec", "Jan", "Feb"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 2,
+              backgroundColor: "#E66FD2",
+              tension: 0.4,
+              borderColor: "#E66FD2",
+            },
+            {
+              label: "# of Votes",
+              data: [10, 8, 14, 8, 20, 9],
+              borderWidth: 2,
+              backgroundColor: "purple",
+              tension: 0.4,
+              borderColor: "purple",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
